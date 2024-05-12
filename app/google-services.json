@@ -1,37 +1,26 @@
 {
   "project_info": {
-    "project_number": "495587121413",
-    "firebase_url": "https://androi-image-fp-default-rtdb.firebaseio.com",
-    "project_id": "androi-image-fp",
-    "storage_bucket": "androi-image-fp.appspot.com"
+    "project_number": "806983400166",
+    "project_id": "codeproject-14bda",
+    "storage_bucket": "codeproject-14bda.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:495587121413:android:fcec7ccd8c5d008e73ff6c",
+        "mobilesdk_app_id": "1:806983400166:android:ffe23dd585cd89fedb5927",
         "android_client_info": {
-          "package_name": "com.shopeeapp"
+          "package_name": "com.shop.store"
         }
       },
-      "oauth_client": [
-        {
-          "client_id": "495587121413-gpg0harp1uljp4qfdb63lnfbi81uhpre.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
+      "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAAzaoDkQnfXI-8kJnsHKi7s1MMqsLybZQ"
+          "current_key": "AIzaSyCEXrU0YnB44Pc4C7Gtr_UHKyvGGBLlIy0"
         }
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "495587121413-gpg0harp1uljp4qfdb63lnfbi81uhpre.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
+          "other_platform_oauth_client": []
         }
       }
     }

@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.CartFragment">
+    tools:context=".store.fragment.CartFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:id="@+id/topNavbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#448aff"
+            android:background="#9fd7f9"
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
@@ -24,6 +24,7 @@
                 android:layout_marginVertical="10dp"
                 android:layout_weight="40"
                 android:ems="10"
+
                 android:gravity="center"
                 android:padding="5dp"
                 android:text="@string/cart"

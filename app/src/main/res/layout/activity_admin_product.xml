@@ -128,8 +128,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/txtAdNameProduct"
                     android:layout_width="match_parent"
-                    android:background="@drawable/customtextedit"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/customtextedit"
                     android:inputType="text" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -202,6 +202,48 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="2dp"
+                android:hint="Size"
+                app:endIconMode="clear_text"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+                app:hintTextColor="@color/theme_color"
+                app:startIconContentDescription="@string/fullName"
+                app:startIconDrawable="@drawable/icon_value">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/customtextedit"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="2dp"
+                android:hint="Color"
+                app:endIconMode="clear_text"
+                app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
+                app:hintTextColor="@color/theme_color"
+                app:startIconContentDescription="@string/fullName"
+                app:startIconDrawable="@drawable/icon_value">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/txtColor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/customtextedit"
+                    android:inputType="text" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginBottom="2dp"
                 android:hint="Star"
                 app:endIconMode="clear_text"
                 app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
@@ -223,7 +265,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="4dp"
                 android:layout_marginBottom="2dp"
-                android:hint="Status"
+                android:hint="Number"
                 app:endIconMode="clear_text"
                 app:hintTextAppearance="@style/TextAppearance.AppCompat.Small"
                 app:hintTextColor="@color/theme_color"

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".activity.admin.ShowAdProTypeActivity">
+    tools:context=".store.activity.admin.ShowAdProTypeActivity">
 
     <LinearLayout
         android:id="@+id/topNavbar"

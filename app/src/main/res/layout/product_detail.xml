@@ -1,21 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frame_product_detail"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/frame_product_detail"
     android:background="#efefef"
     tools:context=".activity.ProductDetail">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <LinearLayout
             android:id="@+id/topNavbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
             android:background="#448aff">
 
             <ImageButton
@@ -23,15 +28,16 @@
                 android:layout_width="25dp"
                 android:layout_height="32dp"
                 android:layout_marginVertical="10dp"
-                android:layout_marginLeft="15dp"
-                android:background="@drawable/arrow_back" />
+                android:layout_marginStart="15dp"
+                android:background="@drawable/arrow_back"
+                android:contentDescription="TODO" />
 
             <TextView
                 android:id="@+id/txtSearch_notification"
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="32dp"
                 android:layout_marginVertical="10dp"
-                android:layout_marginRight="20dp"
+                android:layout_marginEnd="20dp"
                 android:layout_weight="20"
                 android:ems="10"
                 android:gravity="center"
@@ -45,220 +51,372 @@
         <ScrollView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="10">
+            android:layout_below="@id/topNavbar"
+            android:layout_alignParentStart="true"
+            android:paddingBottom="50dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <ImageView
-                    android:id="@+id/productImage"
-                    android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:scaleType="fitXY"
-                    android:src="@drawable/bg_food" />
-
                 <LinearLayout
+                    android:id="@+id/llContent"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
-                    android:background="@color/white"
+                    android:layout_height="match_parent"
                     android:orientation="vertical">
 
+                    <ImageView
+                        android:id="@+id/productImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:contentDescription="@string/todo"
+                        android:scaleType="fitXY"
+                        android:src="@drawable/bg_food" />
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:background="@color/white"
                         android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/productTitle"
+                        <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="@string/product"
-                            android:textColor="@color/theme_color"
-                            android:textSize="24sp"
-                            android:paddingLeft="10dp"
-                            android:textStyle="bold" />
+                            android:orientation="vertical">
 
-                        <TextView
-                            android:id="@+id/productStore"
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="@color/white">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:textColor="#E64A19"
+                                    android:layout_marginStart="10dp"
+                                    android:text="đ"
+                                    android:textSize="10sp" />
+
+                                <TextView
+                                    android:id="@+id/productPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="start"
+                                    android:layout_marginStart="5dp"
+                                    android:text="1000"
+                                    android:textColor="#E64A19"
+                                    android:textSize="16sp" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_marginTop="10dp"
+                                android:orientation="horizontal"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:layout_marginStart="10dp"
+                                    android:src="@drawable/shopping_center"
+                                    android:background="#E64A19"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content">
+
+                                </ImageView>
+
+                                <TextView
+                                    android:textColor="@color/black"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_gravity="center_vertical"
+                                    android:id="@+id/productTitle"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/product"
+                                    android:textSize="14sp" />
+                            </LinearLayout>
+
+                            <TextView
+                                android:visibility="gone"
+                                android:id="@+id/productStore"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="Store"
+                                android:textColor="#0288D1"
+                                android:textSize="18sp"
+                                android:textStyle="bold|italic" />
+
+                            <TextView
+                                android:id="@+id/productStoreAddress"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingStart="10dp"
+                                android:text="Store"
+                                android:textColor="#0288D1"
+                                android:textSize="14sp"
+                                android:textStyle="italic" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Store"
-                            android:paddingLeft="10dp"
-                            android:textColor="#0288D1"
-                            android:textSize="18sp"
-                            android:textStyle="bold|italic" />
+                            android:orientation="horizontal">
 
-                        <TextView
-                            android:id="@+id/productStoreAddress"
+                            <TextView
+                                android:id="@+id/txtColorDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:paddingStart="10dp"
+                                android:text="Màu sắc:"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
+
+                            <Spinner
+                                android:id="@+id/spinerColor"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp" />
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Store"
-                            android:paddingLeft="10dp"
-                            android:textColor="#0288D1"
-                            android:textSize="14sp"
-                            android:textStyle="italic" />
+                            android:orientation="horizontal">
 
-                    </LinearLayout>
+                            <TextView
+                                android:id="@+id/txtSizeDetails"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:paddingStart="10dp"
+                                android:text="Kích cỡ:"
+                                android:textColor="@color/black"
+                                android:textSize="18sp" />
 
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginHorizontal="40dp"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="20dp"
-                        android:background="#ffff">
+                            <Spinner
+                                android:id="@+id/spinerSize"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:layout_marginTop="5dp" />
 
-                        <TextView
-                            android:id="@+id/productPrice"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/bungee"
-                            android:gravity="right"
-                            android:text="1000"
-                            android:textColor="#E64A19"
-                            android:textSize="20sp"
-                            android:textStyle="bold" />
+                        </LinearLayout>
 
                         <TextView
-                            android:id="@+id/productPriceUnit"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginHorizontal="10dp"
-                            android:layout_weight="1"
-                            android:fontFamily="@font/days_one"
-                            android:gravity="left"
-                            android:text="₫"
-                            android:textSize="18sp"
-                            android:textStyle="bold|italic" />
-                    </LinearLayout>
-                </LinearLayout>
-
-                <TextView
-                    android:id="@+id/productDescription"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="15dp"
-                    android:text="Description"
-                    android:background="@color/white"
-                    android:textSize="18sp" />
-
-                <ScrollView
-                    android:id="@+id/svReview"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="15dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="vertical">
-
-                        <TextView
+                            android:id="@+id/txtTitlelDescription"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:text="Review"
-                            android:textSize="18sp"
                             android:background="@color/white"
+                            android:paddingStart="10dp"
+                            android:text="Mô tả"
+                            android:textColor="@color/black"
+                            android:textSize="18sp" />
+
+                        <TextView
+                            android:id="@+id/productDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/white"
+                            android:paddingStart="10dp"
+                            android:text="Description"
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <TextView
+                            android:id="@+id/productNumber"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:background="@color/white"
+                            android:paddingStart="10dp"
+                            android:text="Số lượng còn lại: "
+                            android:textColor="@color/black"
+                            android:textSize="12sp" />
+
+                        <LinearLayout
+                            android:layout_marginTop="10dp"
+                            android:layout_marginBottom="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_marginEnd="30dp"
+                                android:textColor="@color/black"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Chất lượng" />
+
+                            <ImageView
+                                android:id="@+id/star1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_star_outline_24" />
+
+
+                            <ImageView
+                                android:id="@+id/star2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_star_outline_24" />
+
+                            <ImageView
+
+                                android:id="@+id/star3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_star_outline_24" />
+
+                            <ImageView
+
+                                android:id="@+id/star4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_star_outline_24" />
+
+                            <ImageView
+
+                                android:id="@+id/star5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_star_outline_24" />
+
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:text="Bình luận"
+                            android:textColor="@color/black"
+                            android:textSize="18sp"
                             android:textStyle="bold" />
 
                         <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/productReview"
+                            android:id="@+id/rclComment"
                             android:layout_width="match_parent"
-                            android:background="@color/white"
-                            android:layout_height="wrap_content" />
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp" />
+
                     </LinearLayout>
-                </ScrollView>
+                </LinearLayout>
             </LinearLayout>
         </ScrollView>
 
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/btnComment"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="30dp"
+            android:layout_marginBottom="80dp"
+            android:src="@drawable/ic_baseline_message_24" />
+
         <LinearLayout
+            android:background="@color/white"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_alignParentStart="true"
+            android:layout_alignParentBottom="true"
+            android:orientation="horizontal">
 
             <LinearLayout
+                android:layout_weight="1"
+                android:orientation="horizontal"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:background="@color/white"
-                android:layout_marginHorizontal="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginStart="20dp"
-                    android:text="@string/quantity"
-                    android:textColor="@color/theme_color"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:layout_marginHorizontal="10dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal">
 
-                <ImageButton
-                    android:id="@+id/subtract"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_gravity="center"
-                    android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/ic_minus" />
+                    <ImageButton
+                        android:id="@+id/subtract"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/ic_baseline_remove_circle_24" />
 
-                <EditText
-                    android:id="@+id/txtQuantity"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_weight="1"
-                    android:text="0"
-                    android:textAlignment="center"
-                    android:textColor="#ff00"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    <TextView
+                        android:id="@+id/txtQuantity"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_weight="1"
+                        android:text="1"
+                        android:textAlignment="center"
+                        android:textColor="#ff00"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
 
-                <ImageButton
-                    android:id="@+id/plus"
-                    android:layout_width="32dp"
-                    android:layout_height="32dp"
-                    android:layout_gravity="center"
-                    android:layout_marginHorizontal="20dp"
-                    android:background="@drawable/ic_plus" />
+                    <ImageButton
+                        android:id="@+id/plus"
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="20dp"
+                        android:background="@drawable/ic_baseline_add_circle_24"
+                        android:contentDescription="TODO" />
+                </LinearLayout>
             </LinearLayout>
 
-            <Button
-                android:id="@+id/btnAddCart"
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginBottom="5dp"
-                android:fontFamily="@font/bungee"
-                android:gravity="center"
-                android:text="@string/addCart"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textColor="#E64A19"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:backgroundTint="#80cbc4"
-                android:drawableStart="@drawable/add" />
+                android:layout_gravity="center"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/btnAddCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#80cbc4"
+                    android:drawableStart="@drawable/add"
+                    android:fontFamily="@font/bungee"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:text="@string/addCart"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="#E64A19"
+                    android:textSize="14sp" />
 
-            <Button
-                android:id="@+id/btnViewCart"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginHorizontal="30dp"
-                android:layout_marginBottom="5dp"
-                android:backgroundTint="#ef9a9a"
-                android:drawableStart="@drawable/pay_now"
-                android:fontFamily="@font/bungee"
-                android:gravity="center"
-                android:text="@string/view_cart"
-                android:textAlignment="center"
-                android:textAllCaps="true"
-                android:textColor="#E64A19"
-                android:textSize="20sp"
-                android:textStyle="bold" />
+                <Button
+                    android:visibility="gone"
+                    android:id="@+id/btnViewCart"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:backgroundTint="#ef9a9a"
+                    android:drawableStart="@drawable/pay_now"
+                    android:fontFamily="@font/bungee"
+                    android:gravity="center"
+                    android:text="@string/view_cart"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:textColor="#E64A19"
+                    android:textSize="14sp"/>
+            </LinearLayout>
+
+
         </LinearLayout>
-    </LinearLayout>
-</FrameLayout>
+
+    </RelativeLayout>
+</RelativeLayout>

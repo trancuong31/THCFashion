@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.DiscountFragment">
+    tools:context=".store.fragment.DiscountFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -16,7 +16,7 @@
             android:id="@+id/topNavbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#448aff"
+            android:background="#9fd7f9"
             app:layout_constraintTop_toTopOf="parent">
 
             <androidx.appcompat.widget.SearchView
@@ -178,6 +178,7 @@
                                 android:layout_height="match_parent"
                                 android:paddingVertical="10dp"
                                 android:paddingStart="10dp"
+                                android:textColor="#29b6f6"
                                 android:text="@string/product_s_were_found"
                                 android:textSize="18sp"
                                 android:textStyle="bold" />

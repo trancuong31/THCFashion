@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.NotificationFragment">
+    tools:context=".store.fragment.NotificationFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,7 +17,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#448aff">
+            android:background="#9fd7f9">
 
             <ImageButton
                 android:id="@+id/btnBack_notification"
@@ -66,10 +66,13 @@
             android:orientation="vertical">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
                 android:layout_gravity="center"
-                android:background="@drawable/notification_100px" />
+                android:scaleType="centerCrop"
+                android:src="@drawable/thongbao1"
+                android:layout_marginBottom="100dp"
+                android:background="@null" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -78,6 +81,7 @@
                 android:text="@string/no_more_notifications"
                 android:textColor="@color/theme_color"
                 android:textSize="18sp"
+
                 android:textStyle="bold" />
         </LinearLayout>
     </LinearLayout>

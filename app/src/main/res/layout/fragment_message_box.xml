@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    tools:context=".fragment.MessageBoxFragment">
+    tools:context=".store.fragment.MessageBoxFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:id="@+id/topNavbar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#448aff"
+            android:background="#9fd7f9"
             app:layout_constraintTop_toTopOf="parent">
 
             <ImageView

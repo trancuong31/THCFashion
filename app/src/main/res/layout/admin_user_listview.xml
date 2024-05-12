@@ -1,31 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:descendantFocusability="blocksDescendants">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:elevation="8dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="8dp"
+    android:layout_margin="8dp"
+    android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/txt_row_show_idUser"
-        android:layout_width="120dp"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="79dp"
-        android:layout_marginTop="11dp"
-        android:text="Id User"
-        android:textSize="20dp" />
+        android:layout_margin="10dp"
+        android:descendantFocusability="blocksDescendants"
+        android:padding="10dp">
 
-    <TextView
-        android:id="@+id/txt_row_show_nameUser"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="9dp"
-        android:gravity="center"
-        android:layout_marginEnd="38dp"
-        android:text="Name User"
-        android:textSize="20dp" />
+        <TextView
+            android:id="@+id/txt_row_show_idUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="11dp"
+            android:text="Id User"
+            android:textSize="20dp" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/txt_row_show_nameUser"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_row_show_idUser"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="38dp"
+            android:gravity="start"
+            android:text="Name User"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/btnAction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_row_show_nameUser"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="10dp"
+            android:text="action"
+            android:textAllCaps="false" />
+
+        <ImageView
+            android:id="@+id/imgDelete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_row_show_nameUser"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_baseline_delete_24" />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

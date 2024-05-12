@@ -5,7 +5,7 @@
     android:id="@+id/account_fragment"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".fragment.MenuFragment">
+    tools:context=".store.fragment.MenuFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -15,7 +15,7 @@
             android:id="@+id/linearLayout"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#448aff"
+            android:background="#9fd7f9"
             android:orientation="horizontal"
             app:layout_constraintTop_toTopOf="parent">
 

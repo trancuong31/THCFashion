@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:focusable="true"
     android:focusableInTouchMode="true"
-    tools:context=".fragment.HomeFragment">
+    tools:context=".store.fragment.HomeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,7 +18,7 @@
             android:id="@+id/topNavbar"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#448aff"
+            android:background="#9fd7f9"
             app:layout_constraintTop_toTopOf="parent">
 
             <!--<Spinner
@@ -80,7 +80,8 @@
                 <androidx.viewpager.widget.ViewPager
                     android:id="@+id/view_pager"
                     android:layout_width="match_parent"
-                    android:layout_height="220dp"/>
+                    android:layout_height="220dp" />
+
                 <me.relex.circleindicator.CircleIndicator
                     android:layout_width="wrap_content"
                     android:layout_gravity="center"
@@ -108,6 +109,7 @@
                             android:layout_weight="1"
                             android:text="Đề xuất"
                             android:textSize="20sp"
+                            android:textColor="#29b6f6"
                             android:textStyle="bold|italic" />
 
                         <TextView
@@ -152,6 +154,7 @@
                             android:layout_weight="1"
                             android:text="@string/product"
                             android:textSize="20sp"
+                            android:textColor="#29b6f6"
                             android:textStyle="bold|italic" />
 
                         <TextView

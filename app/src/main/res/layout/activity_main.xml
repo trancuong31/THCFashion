@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
         android:layout_weight="0.05"
-        android:background="#448aff"
+        android:background="#9fd7f9"
         app:itemTextColor="@color/light_mode"
         app:layout_constraintBottom_toBottomOf="parent"
         app:menu="@menu/bottom_navbar" />

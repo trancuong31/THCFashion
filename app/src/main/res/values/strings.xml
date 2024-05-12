@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">ShoppeApp</string>
+    <string name="app_name" translatable="false">THC App</string>
     <string name="notifications">Notifications</string>
     <string name="account">Account</string>
     <string name="home">Home</string>
@@ -52,7 +52,7 @@
     <string name="change_language">Change language</string>
     <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="details">Details</string>
-    <string name="product">Product</string>
+    <string name="product">Sản phẩm</string>
     <string name="discount">Discount</string>
     <string name="addCart">Add to cart</string>
     <string name="search_results">Search results</string>
@@ -93,5 +93,6 @@
     <string name="no_more_bills_history">No more bills history</string>
     <string name="bill_status">Bill status</string>
     <string name="paypal_string" translatable="false">Thanh toán với PayPal</string>
+    <string name="todo">TODO</string>
 
 </resources>

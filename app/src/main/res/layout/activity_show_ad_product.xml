@@ -1,80 +1,92 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="#efefef"
-    tools:context=".activity.admin.ShowAdProductActivity">
+    android:orientation="vertical"
+    tools:context=".activity.admin.ShowPaymentActivity">
 
     <LinearLayout
         android:id="@+id/topNavbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#9fd7f9"
+        android:orientation="vertical"
         app:layout_constraintTop_toTopOf="parent">
-
-        <ImageButton
-            android:id="@+id/btnBackToDashboard"
-            android:layout_width="25dp"
-            android:layout_height="32dp"
-            android:layout_marginVertical="10dp"
-            android:layout_marginLeft="15dp"
-            android:background="@drawable/arrow_back" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="32dp"
-            android:layout_marginVertical="10dp"
-            android:layout_marginRight="20dp"
-            android:layout_weight="20"
-            android:ems="10"
-            android:gravity="center"
-            android:padding="5dp"
-            android:text="Show Admin Product"
-            android:textColor="#333"
-            android:textColorHint="#ffffff"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:paddingBottom="0dp"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:scrollbarSize="0dp">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <ListView
-                android:id="@+id/listview"
-                android:layout_width="match_parent"
-                android:layout_height="635dp"
-                android:layout_alignParentTop="true"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <Button
-                android:id="@+id/btnCRUDProduct"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+            <ImageButton
+                android:id="@+id/btnBackToDashboard"
+                android:layout_width="25dp"
+                android:layout_height="32dp"
                 android:layout_marginVertical="10dp"
-                android:layout_marginBottom="-100dp"
-                android:background="#2f3542"
-                android:text="go to crud"
-                android:textColor="#ffffff"
-                android:textSize="20sp"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/arrow_back" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="32dp"
+                android:layout_marginVertical="10dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="20"
+                android:ems="10"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="Show Admin Product"
+                android:textColor="#333"
+                android:textColorHint="#ffffff"
+                android:textSize="18sp"
                 android:textStyle="bold" />
 
-        </LinearLayout>
-    </ScrollView>
+            <ImageView
+                android:id="@+id/imgSort"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_baseline_sort_24" />
 
-</LinearLayout>
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/customtextedit"
+            android:drawableLeft="@drawable/search"
+            android:drawableTint="@color/black"
+            android:paddingStart="10dp"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_above="@id/btnCRUDProduct"
+        android:layout_below="@id/topNavbar" />
+
+    <Button
+        android:id="@+id/btnCRUDProduct"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginVertical="10dp"
+        android:layout_marginBottom="-100dp"
+        android:background="#2f3542"
+        android:text="go to crud"
+        android:textColor="#ffffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+</RelativeLayout>
