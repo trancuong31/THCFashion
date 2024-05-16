@@ -110,6 +110,7 @@
                 android:layout_height="160dp"
                 android:layout_margin="7dp"
                 app:cardCornerRadius="5dp"
+                android:layout_marginLeft="20dp"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -117,7 +118,6 @@
                     android:layout_height="match_parent"
                     android:background="#9fd7f9"
                     android:gravity="center"
-
                     android:orientation="vertical">
 
                     <ImageView
@@ -192,6 +192,7 @@
                 android:layout_height="160dp"
                 android:layout_margin="7dp"
                 app:cardCornerRadius="5dp"
+                android:layout_marginLeft="20dp"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -272,6 +273,7 @@
                 android:layout_height="160dp"
                 android:layout_margin="7dp"
                 app:cardCornerRadius="5dp"
+                android:layout_marginLeft="20dp"
                 app:cardElevation="5dp">
 
                 <LinearLayout
@@ -352,6 +354,7 @@
                 android:layout_height="160dp"
                 android:layout_margin="7dp"
                 app:cardCornerRadius="5dp"
+                android:layout_marginLeft="20dp"
                 app:cardElevation="5dp">
 
                 <LinearLayout

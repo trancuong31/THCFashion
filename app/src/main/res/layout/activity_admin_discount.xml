@@ -196,7 +196,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="10dp"
 
-                android:text="@string/update"
+                android:text="Update"
                 android:textColor="#ffffff"
                 android:background="@drawable/custombutton"
                 android:textSize="20sp"

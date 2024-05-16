@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name" translatable="false">THC App</string>
+    <string name="app_name" translatable="false">THC SHOP</string>
     <string name="notifications">Notifications</string>
     <string name="account">Account</string>
     <string name="home">Home</string>

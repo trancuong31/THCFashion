@@ -159,12 +159,12 @@ public class SignUp extends AppCompatActivity {
             txtFullName.setError("Không được bỏ trống");
             return false;
         }
-        if (email.equals("")) {
-            txtEmail.setError("Không được bỏ trống");
+        if (phone.equals("") ||phone.length()>10) {
+            txtPhone.setError("Số điện thoại không hợp lệ");
             return false;
         }
-        if (phone.equals("")) {
-            txtPhone.setError("Không được bỏ trống");
+        if (email.equals("") || !email.contains("@")) {
+            txtEmail.setError("Email không hợp lệ");
             return false;
         }
         if (address.equals("")) {
